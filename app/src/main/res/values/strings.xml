@@ -1,0 +1,35 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Scouto</string>
+    <string name="sign_up">Sign up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="continue_txt">Continue</string>
+    <string name="joined_us_before">Joined us before ?</string>
+    <string name="sign_in">Sign in</string>
+    <string name="please_enter_email_address">Please enter the email address</string>
+    <string name="invalid_email_address">Invalid Email Address</string>
+    <string name="please_enter_password">Please enter the password</string>
+    <string name="password_must_be_atleast_six_chars">Password must be atleast 6 digits</string>
+    <string name="please_enter_name">Please enter your name</string>
+    <string name="name_must_be_atleast_two_chars">Name must be atleast 2 character</string>
+    <string name="forgot_password"><u>Forgot Password?</u></string>
+    <string name="forgot_password_txt">Forgot Password ?</string>
+    <string name="submit">Submit</string>
+    <string name="a_password_reset_link_will_be_sent_to_your_registered_email_address">A password reset link will be sent to your registered email address.</string>
+    <string name="password_not_match">Password didn\'t match</string>
+    <string name="verifying" tools:ignore="TypographyEllipsis">Verifying...</string>
+    <string name="some_error_occurred">Some error occurred</string>
+    <string name="a_reset_password_link_has_been_sent_to_the_registered_email_address">A reset password link has been sent to the registered email address</string>
+    <string name="please_click_back_to_exit_app">Please click BACK again to exit</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="select_manufacturer">Select make</string>
+    <string name="add_car">Add a new car</string>
+    <string name="select_model">Select model</string>
+    <string name="your_cars">Your cars</string>
+    <string name="new_to_scouto">New to Scouto?</string>
+    <string name="signout">Signout</string>
+    <string name="adding_car">Adding Car…</string>
+    <string name="add_car_image">Add Car Image</string>
+    <string name="delete_car">Delete Car</string>
+</resources>

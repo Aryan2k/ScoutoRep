@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/addCarImg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="#E1E5EA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="16dp"
+        app:riv_tile_mode="clamp" />
+
+    <TextView
+        android:id="@+id/carMakeTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:background="#E1E5EA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/addCarImg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/carModelTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="2dp"
+        android:background="#E1E5EA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/addCarImg"
+        app:layout_constraintTop_toBottomOf="@id/carMakeTxt" />
+
+    <TextView
+        android:id="@+id/addCarImageTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/btn_bg_12"
+        android:backgroundTint="#E1E5EA"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="8dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@id/deleteCarTxt"
+        app:layout_constraintStart_toEndOf="@id/addCarImg"
+        app:layout_constraintTop_toBottomOf="@id/carModelTxt" />
+
+    <TextView
+        android:id="@+id/deleteCarTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/btn_bg_12"
+        android:backgroundTint="#E1E5EA"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="8dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/addCarImageTxt"
+        app:layout_constraintTop_toBottomOf="@id/carModelTxt" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#E3E0E0"
+        app:layout_constraintTop_toBottomOf="@id/addCarImageTxt" />
+</androidx.constraintlayout.widget.ConstraintLayout>

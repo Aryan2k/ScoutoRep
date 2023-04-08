@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_navigation"
+    app:startDestination="@id/manageCarFragment">
+    <fragment
+        android:id="@+id/manageCarFragment"
+        android:name="com.example.scouto.ui.home.ManageCarFragment"
+        android:label="fragment_manage_car"
+        tools:layout="@layout/fragment_manage_car" />
+</navigation>
