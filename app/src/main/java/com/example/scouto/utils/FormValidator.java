@@ -4,8 +4,6 @@ import android.content.Context;
 
 import com.example.scouto.R;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

@@ -28,5 +28,4 @@ public interface CarDao {
     @Query("SELECT * FROM Car")
     List<Car> getCarList();
 
-
 }

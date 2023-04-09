@@ -1,26 +1,22 @@
 package com.example.scouto.adapters;
 
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.DataSource;
-import com.bumptech.glide.load.engine.GlideException;
-import com.bumptech.glide.request.RequestListener;
-import com.bumptech.glide.request.target.Target;
 import com.example.scouto.R;
 import com.example.scouto.callbacks.CarCallbackListener;
 import com.example.scouto.databinding.ItemCarLayoutBinding;
 import com.example.scouto.db.entity.Car;
 
 import java.util.List;
+
 
 public class CarListAdapter extends RecyclerView.Adapter<CarListAdapter.ViewHolder> {
     private final List<Car> carList;

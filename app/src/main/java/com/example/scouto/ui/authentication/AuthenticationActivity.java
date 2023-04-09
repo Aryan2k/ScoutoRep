@@ -20,12 +20,10 @@ import dagger.hilt.android.AndroidEntryPoint;
 @AndroidEntryPoint
 public class AuthenticationActivity extends AppCompatActivity {
 
-    private ActivityAuthenticationBinding binding;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityAuthenticationBinding.inflate(getLayoutInflater());
+        ActivityAuthenticationBinding binding = ActivityAuthenticationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         hideStatusBar();
     }

@@ -32,4 +32,14 @@
     <string name="adding_car">Adding Car…</string>
     <string name="add_car_image">Add Car Image</string>
     <string name="delete_car">Delete Car</string>
+    <string name="please_select_make_first">Please select make first</string>
+    <string name="some_error_occurred_while_fetching_make_details">Some error occurred while fetching make details</string>
+    <string name="car_added_successfully">Car added Successfully</string>
+    <string name="please_select_model_first">Please select model first</string>
+    <string name="do_you_want_to_signout">Do you want to signout ?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="signed_out_successfully">Signed out successfully</string>
+    <string name="alert">Alert !</string>
+    <string name="some_error_occured">Some error occured!</string>
 </resources>

@@ -17,9 +17,6 @@ import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 import com.google.android.material.snackbar.Snackbar;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 import javax.annotation.Nullable;
 
 public class FunctionUtils {
@@ -66,10 +63,4 @@ public class FunctionUtils {
         return Snackbar.make(view, msg, time);
     }
 
-    public static String getMonthNameFromMonthNumber(int monthNumber) {
-        ArrayList<String> monthList = new ArrayList<>(Arrays.asList("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"));
-        if (monthNumber >= 1 && monthNumber <= 12)
-            return monthList.get(monthNumber);
-        else return "error";
-    }
 }

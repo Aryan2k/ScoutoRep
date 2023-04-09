@@ -41,11 +41,9 @@ public class ManageCarViewModel extends ViewModel {
     public ArrayList<ModelDetails> modelDetailsArrayList;
 
     @Inject
-
     public ManageCarViewModel(HomeRepository homeRepository) {
         this.homeRepository = homeRepository;
     }
-
 
     public void insertCar(Car car) {
         insertCarLiveData.postValue(new Resource<>(RequestStatus.LOADING, null, null));

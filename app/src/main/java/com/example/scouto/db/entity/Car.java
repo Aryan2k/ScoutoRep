@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+@SuppressWarnings("unused")
 @Entity
 public class Car {
 

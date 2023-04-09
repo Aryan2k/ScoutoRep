@@ -121,16 +121,14 @@ public class ManageCarFragment extends Fragment implements View.OnClickListener,
                     binding.shimmerModelDetails.root.stopShimmer();
                     ArrayAdapter<ModelDetails> modelAdapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_spinner_dropdown_item, viewModel.modelDetailsArrayList);
                     binding.modelTxt.setAdapter(modelAdapter);
-                    binding.modelTxt.setOnItemClickListener((adapterView, view, i, l) -> {
-                        viewModel.activateBtn(true, true);
-                    });
+                    binding.modelTxt.setOnItemClickListener((adapterView, view, i, l) -> viewModel.activateBtn(true, true));
                     break;
                 }
                 case EXCEPTION: {
                     binding.modelContainer.setVisibility(View.VISIBLE);
                     binding.shimmerModelDetails.getRoot().setVisibility(View.GONE);
                     binding.shimmerModelDetails.root.stopShimmer();
-                    FunctionUtils.toast(requireContext(), "Some error occurred while fetching make details", Toast.LENGTH_SHORT);
+                    FunctionUtils.toast(requireContext(), getString(R.string.some_error_occurred_while_fetching_make_details), Toast.LENGTH_SHORT);
                     break;
                 }
             }
@@ -165,7 +163,7 @@ public class ManageCarFragment extends Fragment implements View.OnClickListener,
                     binding.manufacturerContainer.setVisibility(View.VISIBLE);
                     binding.shimmerMakeDetails.getRoot().setVisibility(View.GONE);
                     binding.shimmerMakeDetails.root.stopShimmer();
-                    FunctionUtils.toast(requireContext(), "Some error occurred while fetching make details", Toast.LENGTH_SHORT);
+                    FunctionUtils.toast(requireContext(), getString(R.string.some_error_occurred_while_fetching_make_details), Toast.LENGTH_SHORT);
                     break;
                 }
             }
@@ -188,7 +186,7 @@ public class ManageCarFragment extends Fragment implements View.OnClickListener,
                 }
                 case EXCEPTION: {
                     Objects.requireNonNull(binding.carListRv.findViewHolderForAdapterPosition(resource.getData().get())).itemView.setAlpha(1f);
-                    FunctionUtils.toast(requireContext(), "Some error occurred", Toast.LENGTH_SHORT);
+                    FunctionUtils.toast(requireContext(), getString(R.string.some_error_occurred), Toast.LENGTH_SHORT);
                     break;
                 }
             }
@@ -211,7 +209,7 @@ public class ManageCarFragment extends Fragment implements View.OnClickListener,
                 }
                 case EXCEPTION: {
                     Objects.requireNonNull(binding.carListRv.findViewHolderForAdapterPosition(resource.getData().get())).itemView.setAlpha(1f);
-                    FunctionUtils.toast(requireContext(), "Some error occurred", Toast.LENGTH_SHORT);
+                    FunctionUtils.toast(requireContext(), getString(R.string.some_error_occurred), Toast.LENGTH_SHORT);
                     break;
                 }
             }
@@ -250,7 +248,7 @@ public class ManageCarFragment extends Fragment implements View.OnClickListener,
                     break;
                 }
                 case SUCCESS: {
-                    FunctionUtils.toast(requireContext(), "Car added Successfully", Toast.LENGTH_SHORT);
+                    FunctionUtils.toast(requireContext(), getString(R.string.car_added_successfully), Toast.LENGTH_SHORT);
                     binding.addCarBtnTxt.setText(R.string.add_car);
                     binding.addNewCarProgress.setVisibility(View.INVISIBLE);
                     viewModel.carList.add(0, resource.getData().get());
@@ -259,7 +257,7 @@ public class ManageCarFragment extends Fragment implements View.OnClickListener,
                     break;
                 }
                 case EXCEPTION: {
-                    FunctionUtils.toast(requireContext(), "Some error occurred", Toast.LENGTH_SHORT);
+                    FunctionUtils.toast(requireContext(), getString(R.string.some_error_occured), Toast.LENGTH_SHORT);
                     binding.addCarBtnTxt.setText(R.string.add_car);
                     binding.addNewCarProgress.setVisibility(View.INVISIBLE);
                     break;
@@ -282,9 +280,9 @@ public class ManageCarFragment extends Fragment implements View.OnClickListener,
                 showSignoutDialog();
             } else if (binding.addCarBtn.getId() == view.getId()) {
                 if (binding.manufacturerTxt.getText().toString().isEmpty()) {
-                    FunctionUtils.toast(requireContext(), "Please select make first", Toast.LENGTH_SHORT);
+                    FunctionUtils.toast(requireContext(), getString(R.string.please_select_make_first), Toast.LENGTH_SHORT);
                 } else if (binding.modelTxt.getText().toString().isEmpty()) {
-                    FunctionUtils.toast(requireContext(), "Please select model first", Toast.LENGTH_SHORT);
+                    FunctionUtils.toast(requireContext(), getString(R.string.please_select_model_first), Toast.LENGTH_SHORT);
                 } else {
                     viewModel.insertCar(new Car(0, "", binding.manufacturerTxt.getText().toString(), binding.modelTxt.getText().toString()));
                 }
@@ -294,19 +292,17 @@ public class ManageCarFragment extends Fragment implements View.OnClickListener,
 
     private void showSignoutDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
-        builder.setMessage("Do you want to signout ?");
-        builder.setTitle("Alert !");
+        builder.setMessage(R.string.do_you_want_to_signout);
+        builder.setTitle(R.string.alert);
         builder.setIcon(R.drawable.baseline_warning_24);
         builder.setCancelable(false);
-        builder.setPositiveButton("Yes", (dialog, which) -> {
+        builder.setPositiveButton(R.string.yes, (dialog, which) -> {
             FirebaseAuth.getInstance().signOut();
             startActivity(new Intent(requireActivity(), AuthenticationActivity.class));
-            FunctionUtils.toast(requireContext(), "Signed out successfully", Toast.LENGTH_SHORT);
+            FunctionUtils.toast(requireContext(), getString(R.string.signed_out_successfully), Toast.LENGTH_SHORT);
             requireActivity().finish();
         });
-        builder.setNegativeButton("No", (dialog, which) -> {
-            dialog.cancel();
-        });
+        builder.setNegativeButton(R.string.no, (dialog, which) -> dialog.cancel());
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
     }

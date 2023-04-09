@@ -1,8 +1,11 @@
 package com.example.scouto.network.response.manage_car;
 
+import androidx.annotation.NonNull;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+@SuppressWarnings("unused")
 public class ModelDetails {
     @SerializedName("Make_ID")
     @Expose
@@ -49,6 +52,7 @@ public class ModelDetails {
         this.modelName = modelName;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return modelName;
